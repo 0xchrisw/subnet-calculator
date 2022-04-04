@@ -1,0 +1,120 @@
+<HTML>
+<!DOCTYPE html>
+  <head>
+    <TITLE>Tools</TITLE>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- AUTO REFRESH
+    <meta http-equiv="refresh" content="30"/>
+    -->
+
+    <HTA:APPLICATION
+        APPLICATIONNAME = "IP Tools"
+        ICON = "icon.ico"
+        SINGLEINSTANCE = "yes"
+        CAPTION="no"
+        BORDER="thin"
+        BORDERSTYLE="normal"
+        SCROLL = "yes"
+        SCROLLFLAT = "yes"
+        SYSMENU = "no"
+        SHOWINTASKBAR = "no" >
+
+    <script language="javascript">
+    window.resizeTo( 450, 500 );
+    self.moveTo( 0, 0 )
+    //window.blur( );
+    </script>
+    <script language="VBScript">
+
+    </script>
+    <link rel="stylesheet" href="IP.css">
+  </head>
+
+  <body bgcolor="ghostwhite" onkeypress="if (window.event.keyCode==27){window.close();}">
+
+    <h1>IP Tools</h1>
+    <form>
+      <div id="row">
+        <input id="input" type="text" value="" />
+        <input id="submit" type="button" value="Submit" onclick="parseInput()" />
+      </div>
+
+      <fieldset>
+        <legend>Result:</legend>
+        <div class="row">
+          <div class="label">IP Address:</div>
+          <input id="IPAddress" type="text" value="" />
+        </div>
+        <div class="row">
+          <div class="label">Class:</div>
+          <input id="Class" type="text" value="" />
+        </div>
+
+        <div class="row">
+          <div class="label">CIDR:</div>
+          <input id="CIDR" type="text" value="" />
+        </div>
+        <div class="row">
+          <div class="label">Mask:</div>
+          <input id="Mask" type="text" value="" />
+        </div>
+        <div class="row">
+          <div class="label">Wildcard:</div>
+          <input id="Wildcard" type="text" value="" />
+        </div>
+        <div class="row">
+          <div class="label">Range</div>
+          <input id="Range" type="text" value="" />
+        </div>
+        <div class="row">
+          <div class="label">NetID:</div>
+          <input id="NetworkID" type="text" value="" />
+        </div>
+        <div class="row">
+          <div class="label">First Host:</div>
+          <input id="FirstHost" type="text" value="" />
+        </div>
+        <div class="row">
+          <div class="label">Last Host:</div>
+          <input id="LastHost" type="text" value="" />
+        </div>
+        <div class="row">
+          <div class="label">Broadcast</div>
+          <input id="Broadcast" type="text" value="" />
+        </div>
+        <div class="row">
+          <div class="label">Next Network:</div>
+          <input id="NextNetwork" type="text" value="" />
+        </div>
+      </fieldset>
+    </form>
+    <a href="#" onclick="self.close()">Close</a>
+  </body>
+	<script>
+    /* Move the Window */
+/*
+window.onmousedown = function( event ) {
+  startX = event.clientX
+  startY = event.clientY
+
+  function move( ev ) {
+    self.moveTo( ev.clientX - startX, ev.clientY - startY )
+  };
+  window.addEventListener('mousemove', move );
+
+  window.onmouseup = function( event ) {
+    window.removeEventListener( 'mousemove', move);
+  };
+};
+*/
+
+    /* AUTO REFRESH
+    setTimeout( function( ) {
+      location.reload( );
+    }, 5000 );  // 5 Seconds
+    */
+    //{ (new ActiveXObject("WScript.Shell")).Exec("notepad"); }
+  </script>
+	<script src="IP.js"></script>
+</HTML>

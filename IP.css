@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin: 3px;
+}
+
+#row {
+  margin-bottom: 12px;
+}
+#input, #submit {
+  margin:  0px;
+  padding: 0px;
+  display: inline-block;
+}
+#input {
+  width: 71%;
+}
+#submit {
+  width: 24%;
+}
+
+fieldset .row {
+  margin:  0px;
+  padding: 0px;
+  width:   100%;
+}
+.row .label, .row input {
+  margin:  0px;
+  padding: 0px;
+  display: inline-block;
+}
+.row .label {
+  width: 33%;
+}
+.row input {
+  width: 63%;
+}
