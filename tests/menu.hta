@@ -1,0 +1,56 @@
+<HTML>
+<!DOCTYPE html>
+  <head>
+    <TITLE>Tools</TITLE>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- AUTO REFRESH
+    <meta http-equiv="refresh" content="30"/>
+    -->
+    
+    <HTA:APPLICATION
+        APPLICATIONNAME = "IP Tools"
+        ICON = "icon.ico"
+        SINGLEINSTANCE = "yes"
+        CAPTION="no"
+        BORDER="thin"
+        BORDERSTYLE="normal"
+        SCROLL = "yes"
+        SCROLLFLAT = "yes"
+        SYSMENU = "no"
+        SHOWINTASKBAR = "no" >
+
+    <script language="javascript">
+    window.resizeTo( 450, 500 );
+    self.moveTo( 0, 0 )
+    //window.blur( );
+window.onmousedown = function( event ) {
+  startX = event.clientX
+  startY = event.clientY
+  
+  function move( ev ) {
+    X = (ev.clientX - startX)
+    Y = (ev.clientY - startY )
+    self.moveTo( X, Y )
+    document.body.innerHTML = startX + ' - ' + startY
+    document.body.innerHTML += '<br>'
+    document.body.innerHTML += ev.clientX + ' - ' + ev.clientY
+    document.body.innerHTML += '<br>'
+    document.body.innerHTML += (X - startX) + ' - ' + (Y - startY )
+  };
+  window.addEventListener('mousemove', move );
+
+  window.onmouseup = function( event ) {
+    window.removeEventListener( 'mousemove', move);
+  };    
+};
+    </script>
+    <script language="VBScript">
+
+    </script>
+    <link rel="stylesheet" href="IP.css">
+  </head>
+  <body>
+  
+  </body>
+  </html>
